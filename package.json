@@ -1,0 +1,24 @@
+{
+  "name": "mod-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "start": "node dist/server.js",
+    "postinstall": "copyfiles -u 1 public/* dist/ && copyfiles -u 1 src/server.js dist/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon -e js,json src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  }
+}
